@@ -45,7 +45,7 @@ $.getJSON('/token', function(data) {
   document.getElementById('button-join').onclick = function () {
     roomName = document.getElementById('room-name').value;
     if (roomName) {
-      log("Joining room '" + roomName + "'...");
+      log("Connected to Doctor '" + roomName + "'...");
 
       var connectOptions = { name: roomName, logLevel: 'debug' };
       if (previewTracks) {
@@ -56,7 +56,7 @@ $.getJSON('/token', function(data) {
         log('Could not connect to Twilio: ' + error.message);
       });
     } else {
-      alert('Please enter a room name.');
+      alert('Please enter a doctor id');
     }
   };
 
